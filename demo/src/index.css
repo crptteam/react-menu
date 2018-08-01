@@ -1,0 +1,9 @@
+.index {
+  display: inline-flex;
+  flex-direction: row;
+  height: calc(100vh - 150px);
+  background-color: white;
+}
+.smth {
+  display: inline-flex;
+}
