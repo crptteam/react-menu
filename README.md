@@ -1,34 +1,60 @@
-# react-sidebar
+# react-menu
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-# Avatar
+## Install ##
+`npm i --save @crpt/react-menu`
 
-It can display sidebar with children as content.
-
-## Usage
-
+### Usage ###
 ```javascript
-
-import Sidebar from "@crpt/react-sidebar";
-
+import Menu from "@crpt/react-menu"; 
 ...
-onSidebarClose() {
-    this.setState({ sidebarActive: false });
-}
-...
-<Sidebar active={this.state.sidebarActive} onClose={this.onSidebarClose}>content</Sidebar>
-...
-
+<Menu
+    isFull={isFull}
+    header={Header}
+    footer={Footer}
+    menuItems={menuItems}
+    onFullModeClick={toggleFullMode}
+/>
 ```
+
 
 | PropName | Description | Example |
 |---|---|---|
-| theme: object | Theme object | <Sidebar theme={myTheme}/> |
-| active: Boolean | Sidebar activity. Is Required. | <Sidebar active={true} .../> |
-| onClose: Function | Callback for change container state if blocker clicked. Is Required. | <Sidebar onClose={onClose} .../> |
+| `isFull: boolean`  | When true Menu width is wide, else - narrow |   |
+| `header: function`  | Header component. _See Note1_ |   |
+| `footer: function`  | Footer component. _See Note1_ |   |
+| `menuItems: Array of objects`  | Menu items. _See Note2_ |   |
+
+
+
+___Note 1.___ 
+  Function will be called with parameter isFull.
+  
+  Lets we have a menu item (or header, or footer) component like this:
+```
+const MenuItem = ({ isFull, text, iconName }) => (
+  <div
+    style={{ ... }}
+    onClick={() => console.log(`Clicked to ${text}.`)}
+  >
+    <Icon type={iconName} />
+    {isFull ? text : null}
+  </div>
+);
+```
+  We can define text and iconName props for every item, and isFull property will be sent when render 
+`({ isFull }) => (<MenuItem isFull={isFull} text="smthText" iconName="smthIconName" />);`
+  
+
+___Note 2.___ Object of menuItems description.
+
+| PropName | Type |
+|---|---|
+| component | function. _See Note1_ |
+| isSelected | boolean |
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
