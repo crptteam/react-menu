@@ -4,11 +4,7 @@ import ButtonIcon from '../../svg/buttonIcon.svg';
 import ButtonWrapper from '../../styled/ButtonWrapper';
 
 const propTypes = {
-  onClick: PropTypes.func,
-};
-
-const defaultProps = {
-  onClick: () => {},
+  onClick: PropTypes.func.isRequired,
 };
 
 const Button = ({
@@ -21,6 +17,5 @@ const Button = ({
 
 Button.displayName = 'Button';
 Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
 
 export default Button;

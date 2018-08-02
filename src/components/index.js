@@ -20,7 +20,6 @@ class Menu extends PureComponent {
         isSelected: PropTypes.bool.isRequired,
       }),
     ),
-    theme: PropTypes.object,
   };
 
   static defaultProps = {

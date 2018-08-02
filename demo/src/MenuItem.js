@@ -13,7 +13,16 @@ const defaultProps = {
 };
 
 const MenuItem = ({ isFull, text, iconName }) => (
-  <div>
+  <div
+    style={{
+      height: '100%',
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: isFull ? 'flex-start' : 'center',
+    }}
+    onClick={() => console.log(`Clicked to ${text}.`)}
+  >
     <Icon type={iconName} />
     {isFull ? text : null}
   </div>

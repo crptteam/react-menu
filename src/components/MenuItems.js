@@ -23,7 +23,6 @@ export default class MenuItems extends PureComponent {
       content,
     } = this.props;
 
-
     return (
       <MenuItemsWrapper>
         {content.map((Item, i) => (
