@@ -11,43 +11,43 @@ describe('Menu', () => {
 });
 
 describe('MenuWrapper', () => {
-  it('should render with correct isFull', () => {
-    const component = shallow(<Menu isFull />);
+  it('should render with correct isOpen', () => {
+    const component = shallow(<Menu isOpen />);
     expect(
       component
         .find('WithTheme(MenuWrapper)')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false });
+    component.setProps({ isOpen: false });
     expect(
       component
         .find('WithTheme(MenuWrapper)')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 });
 
 describe('Header', () => {
-  it('should render with correct isFull', () => {
-    const component = shallow(<Menu isFull />);
+  it('should render with correct isOpen', () => {
+    const component = shallow(<Menu isOpen />);
     expect(
       component
         .find('Header')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false });
+    component.setProps({ isOpen: false });
     expect(
       component
         .find('Header')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 
   it('should render with correct content', () => {
     const headerContent = jest.fn();
-    const component = shallow(<Menu isFull footer={headerContent} />);
+    const component = shallow(<Menu isOpen footer={headerContent} />);
     expect(
       component
         .find('Footer')
@@ -57,25 +57,25 @@ describe('Header', () => {
 });
 
 describe('Footer', () => {
-  it('should render with correct isFull', () => {
-    const component = shallow(<Menu isFull />);
+  it('should render with correct isOpen', () => {
+    const component = shallow(<Menu isOpen />);
     expect(
       component
         .find('Footer')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false });
+    component.setProps({ isOpen: false });
     expect(
       component
         .find('Footer')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 
   it('should render with correct content', () => {
     const footerContent = jest.fn();
-    const component = shallow(<Menu isFull footer={footerContent} />);
+    const component = shallow(<Menu isOpen footer={footerContent} />);
     expect(
       component
         .find('Footer')
@@ -85,26 +85,26 @@ describe('Footer', () => {
 
   it('should call callback on click', () => {
     const onClick = jest.fn();
-    const component = shallow(<Menu isFull onFullModeClick={onClick} />);
+    const component = shallow(<Menu isOpen onFullModeClick={onClick} />);
     component.find('Footer').simulate('click');
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 });
 
 describe('MenuItems', () => {
-  it('should render with correct isFull', () => {
-    const component = shallow(<Menu isFull />);
+  it('should render with correct isOpen', () => {
+    const component = shallow(<Menu isOpen />);
     expect(
       component
         .find('MenuItems')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false });
+    component.setProps({ isOpen: false });
     expect(
       component
         .find('MenuItems')
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 
@@ -114,7 +114,7 @@ describe('MenuItems', () => {
       isSelected: false,
     }];
 
-    const component = shallow(<Menu isFull menuItems={items} />);
+    const component = shallow(<Menu isOpen menuItems={items} />);
     expect(
       component
         .find('MenuItems')

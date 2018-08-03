@@ -14,6 +14,7 @@ const propTypes = {
 };
 
 const ButtonDiv = styled.div`
+  -js-display: flex;
   display: flex;
   align-items: center;
   height: ${({ fullModeButtonTheme }) => fullModeButtonTheme.height};

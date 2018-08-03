@@ -3,7 +3,7 @@
 exports[`Header should render without problem 1`] = `
 <WithTheme(HeaderWrapper)>
   <content
-    isFull={true}
+    isOpen={true}
   />
 </WithTheme(HeaderWrapper)>
 `;

@@ -4,6 +4,11 @@ module.exports = {
     esModules: true,
     umd: false
   },
+  webpack: {
+    html: {
+      template: 'demo/src/index.html',
+    },
+  },
   babel: {
     presets: [["env", {"modules": "umd"}], "react"],
     plugins: [

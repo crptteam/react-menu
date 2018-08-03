@@ -12,7 +12,7 @@
 import Menu from "@crpt/react-menu"; 
 ...
 <Menu
-    isFull={isFull}
+    isOpen={isOpen}
     header={Header}
     footer={Footer}
     menuItems={menuItems}
@@ -23,7 +23,7 @@ import Menu from "@crpt/react-menu";
 
 | PropName | Description | Example |
 |---|---|---|
-| `isFull: boolean`  | When true Menu width is wide, else - narrow |   |
+| `isOpen: boolean`  | When true Menu width is wide, else - narrow |   |
 | `header: function`  | Header component. _See Note1_ |   |
 | `footer: function`  | Footer component. _See Note1_ |   |
 | `menuItems: Array of objects`  | Menu items. _See Note2_ |   |
@@ -31,22 +31,22 @@ import Menu from "@crpt/react-menu";
 
 
 ___Note 1.___ 
-  Function will be called with parameter isFull.
+  Function will be called with parameter isOpen.
   
   Lets we have a menu item (or header, or footer) component like this:
 ```
-const MenuItem = ({ isFull, text, iconName }) => (
+const MenuItem = ({ isOpen, text, iconName }) => (
   <div
     style={{ ... }}
     onClick={() => console.log(`Clicked to ${text}.`)}
   >
     <Icon type={iconName} />
-    {isFull ? text : null}
+    {isOpen ? text : null}
   </div>
 );
 ```
-  We can define text and iconName props for every item, and isFull property will be sent when render 
-`({ isFull }) => (<MenuItem isFull={isFull} text="smthText" iconName="smthIconName" />);`
+  We can define text and iconName props for every item, and isOpen property will be sent when render 
+`({ isOpen }) => (<MenuItem isOpen={isOpen} text="smthText" iconName="smthIconName" />);`
   
 
 ___Note 2.___ Object of menuItems description.

@@ -11,7 +11,7 @@ import MenuItem from './MenuItem';
 
 class Demo extends Component {
   state = {
-    isFull: false,
+    isOpen: false,
   }
   constructor() {
     super();
@@ -20,35 +20,35 @@ class Demo extends Component {
       component: () => (<div>menu_0</div>),
       isSelected: true,
     }, {
-      component: ({ isFull }) => (<MenuItem isFull={isFull} iconName="calendar-icon" text="menu 1_" />),
+      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="calendar-icon" text="menu 1_" />),
       isSelected: true,
     }, {
-      component: ({ isFull }) => (<MenuItem isFull={isFull} iconName="checkmark" text="menu 2___" />),
+      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="checkmark" text="menu 2___" />),
       isSelected: false,
     }, {
-      component: ({ isFull }) => (<MenuItem isFull={isFull} iconName="code-invalid" text="menu 3____" />),
+      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="code-invalid" text="menu 3____" />),
       isSelected: false,
     }, {
-      component: ({ isFull }) => (<MenuItem isFull={isFull} iconName="edit" text="menu 4" />),
+      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="edit" text="menu 4" />),
       isSelected: true,
     }, {
-      component: ({ isFull }) => (<MenuItem isFull={isFull} iconName="emission" text="menu 5_" />),
+      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="emission" text="menu 5_" />),
       isSelected: true,
     }, {
-      component: ({ isFull }) => (<MenuItem isFull={isFull} iconName="pack" text="menu 6____  " />),
+      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="pack" text="menu 6____  " />),
       isSelected: false,
     }];
   }
 
   toggleFullMode = () => {
-    console.log('Changed isFull');
-    const { isFull } = this.state;
-    this.setState({ isFull: !isFull });
+    console.log('Changed isOpen');
+    const { isOpen } = this.state;
+    this.setState({ isOpen: !isOpen });
   }
 
   render() {
     const {
-      isFull,
+      isOpen,
     } = this.state;
 
     return (
@@ -56,16 +56,18 @@ class Demo extends Component {
         <h1>
           react-menu Demo
         </h1>
-        <div className="index">
-          <Menu
-            isFull={isFull}
-            header={Header}
-            footer={Footer}
-            menuItems={this.menuItems}
-            onFullModeClick={this.toggleFullMode}
-          />
+        <div className="flex-display_with_polyfill">
+          <div className="index">
+            <Menu
+              isOpen={isOpen}
+              header={Header}
+              footer={Footer}
+              menuItems={this.menuItems}
+              onFullModeClick={this.toggleFullMode}
+            />
+          </div>
+          <div className="smth">Smth</div>
         </div>
-        <div className="smth">Smth</div>
       </div>
     );
   }

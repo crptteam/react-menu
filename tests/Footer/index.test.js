@@ -7,34 +7,34 @@ describe('Footer', () => {
   it('should renders without problem', () => {
     const content = jest.fn();
     const onClick = jest.fn();
-    const component = shallow(<Footer isFull content={content} onClick={onClick} />);
+    const component = shallow(<Footer isOpen content={content} onClick={onClick} />);
     expect(component).toMatchSnapshot();
   });
 
-  it('calling content render with isFull', () => {
+  it('calling content render with isOpen', () => {
     const content = jest.fn();
     const onClick = jest.fn();
-    const component = shallow(<Footer isFull content={content} onClick={onClick} />);
+    const component = shallow(<Footer isOpen content={content} onClick={onClick} />);
     expect(
       component
         .find('mockConstructor')
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false, content, onClick });
+    component.setProps({ isOpen: false, content, onClick });
     expect(
       component
         .find('mockConstructor')
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 
   it('calling callback on click to Button', () => {
     const content = jest.fn();
     const onClick = jest.fn();
-    const component = shallow(<Footer isFull content={content} onClick={onClick} />);
+    const component = shallow(<Footer isOpen content={content} onClick={onClick} />);
     component.find('Button').simulate('click');
     expect(onClick).toHaveBeenCalledTimes(1);
   });

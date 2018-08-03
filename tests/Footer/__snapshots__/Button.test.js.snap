@@ -180,7 +180,7 @@ exports[`Footer/Button should renders without problem 1`] = `
           }
         >
           <div
-            className="ButtonWrapper__ButtonDiv-hjHEpT efBHuW"
+            className="ButtonWrapper__ButtonDiv-hjHEpT cHjIRQ"
             onClick={[MockFunction]}
           >
             <ButtonIcon

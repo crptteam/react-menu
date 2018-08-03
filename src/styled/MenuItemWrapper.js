@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 
 const propTypes = {
-  isFull: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   theme: PropTypes.shape({
     Menu: PropTypes.shape({
       item: PropTypes.shape({
@@ -30,16 +30,18 @@ const MenuItemDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: 
-    ${({ isFull, itemTheme }) => (isFull ? itemTheme.justifyContentOnFull : itemTheme.justifyContentOnFold)};
+  ${({ isOpen, itemTheme }) => (
+    isOpen ? itemTheme.justifyContentOnFull : itemTheme.justifyContentOnFold
+  )};
   width: ${({ itemTheme }) => itemTheme.width};
   height: ${({ itemTheme }) => itemTheme.height};
   margin-top: ${({ itemTheme }) => itemTheme.marginTop};
   margin-bottom: ${({ itemTheme }) => itemTheme.marginBottom};
   border-radius: ${({ itemTheme }) => itemTheme.borderRadius};
   border:
-      ${({ itemTheme }) => itemTheme.hoverBorderWidth} 
-      solid 
-      rgba(0,0,0,0);
+    ${({ itemTheme }) => itemTheme.hoverBorderWidth} 
+    solid 
+    rgba(0,0,0,0);
       
   :hover {
     border-color: ${({ itemTheme }) => itemTheme.hoverBorderColor};
@@ -50,7 +52,9 @@ const MenuItemDiv = styled.div`
       0
       ${({ itemTheme }) => itemTheme.shadowColor};
   }
-  background-color: ${({ isSelected, itemTheme }) => (isSelected ? itemTheme.isSelectedColor : null)};
+  background-color: ${({ isSelected, itemTheme }) => (
+    isSelected ? itemTheme.isSelectedColor : null
+  )};
   ${({ isSelected, itemTheme }) => (isSelected
     ? `box-shadow: ${itemTheme.shadowX} ${itemTheme.shadowY}  0 0 ${itemTheme.shadowColor};`
     : ''

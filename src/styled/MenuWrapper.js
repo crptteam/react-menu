@@ -5,7 +5,7 @@ import { get } from 'lodash';
 
 
 const propTypes = {
-  isFull: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   theme: PropTypes.shape({
     Menu: PropTypes.shape({
       common: PropTypes.shape({
@@ -24,13 +24,14 @@ const propTypes = {
 };
 
 const MenuDiv = styled.div`
+  -js-display: flex;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  width: ${({ isFull, menuTheme }) => {
+  width: ${({ isOpen, menuTheme }) => {
     const { full, fold } = menuTheme.width;
-    return isFull ? full : fold;
+    return isOpen ? full : fold;
   }}
   background-color: ${({ menuTheme }) => menuTheme.backgroundColor};
   transition: 0.5s all;

@@ -18,12 +18,12 @@ const propTypes = {
 };
 
 const HeaderDiv = styled.div`
+  -js-display: flex;
   display: flex;
+  justify-content: ${({ headerTheme }) => headerTheme.alignItems};
   height: ${({ headerTheme }) => headerTheme.height};
   margin-top: ${({ headerTheme }) => headerTheme.marginTop};
   margin-bottom: ${({ headerTheme }) => headerTheme.marginBottom};
-}};
-  justify-content: ${({ headerTheme }) => headerTheme.alignItems};
 `;
 
 

@@ -15,7 +15,7 @@ describe('MenuItems', () => {
       component: jest.fn(),
       isSelected: false,
     }];
-    const component = shallow(<MenuItems isFull content={items} />);
+    const component = shallow(<MenuItems isOpen content={items} />);
     expect(component).toMatchSnapshot();
   });
 
@@ -30,7 +30,7 @@ describe('MenuItems', () => {
       component: jest.fn(),
       isSelected: false,
     }];
-    const component = shallow(<MenuItems isFull content={items} />);
+    const component = shallow(<MenuItems isOpen content={items} />);
     expect(
       component
         .find('mockConstructor')
@@ -44,47 +44,47 @@ describe('MenuItems', () => {
     ).toEqual(items.length);
   });
 
-  it('should render component from items with isFull value', () => {
+  it('should render component from items with isOpen value', () => {
     const items = [{
       component: jest.fn(),
       isSelected: false,
     }];
-    const component = shallow(<MenuItems isFull content={items} />);
+    const component = shallow(<MenuItems isOpen content={items} />);
     expect(
       component
         .find('mockConstructor')
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false, content: items });
+    component.setProps({ isOpen: false, content: items });
     expect(
       component
         .find('mockConstructor')
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 
-  it('should render MenuItemWrapper with isFull value', () => {
+  it('should render MenuItemWrapper with isOpen value', () => {
     const items = [{
       component: jest.fn(),
       isSelected: false,
     }];
-    const component = shallow(<MenuItems isFull content={items} />);
+    const component = shallow(<MenuItems isOpen content={items} />);
     expect(
       component
         .find('WithTheme(MenuItemWrapper)')
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false, content: items });
+    component.setProps({ isOpen: false, content: items });
     expect(
       component
         .find('WithTheme(MenuItemWrapper)')
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 
@@ -94,7 +94,7 @@ describe('MenuItems', () => {
       component: jest.fn(),
       isSelected: false,
     }];
-    const component = shallow(<MenuItems isFull content={items} />);
+    const component = shallow(<MenuItems isOpen content={items} />);
     expect(
       component
         .find('WithTheme(MenuItemWrapper)')
@@ -103,7 +103,7 @@ describe('MenuItems', () => {
     ).toEqual(false);
 
     items[0].isSelected = true;
-    component.setProps({ isFull: false, content: items });
+    component.setProps({ isOpen: false, content: items });
     expect(
       component
         .find('WithTheme(MenuItemWrapper)')

@@ -7,7 +7,7 @@ exports[`Footer should renders without problem 1`] = `
   />
   <SeparateLine />
   <mockConstructor
-    isFull={true}
+    isOpen={true}
   />
 </WithTheme(FooterWrapper)>
 `;

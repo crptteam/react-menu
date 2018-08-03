@@ -5,31 +5,31 @@ import Header from '../src/components/Header';
 
 describe('Header', () => {
   it('should render without problem', () => {
-    const component = shallow(<Header isFull content={() => (<div />)} />);
+    const component = shallow(<Header isOpen content={() => (<div />)} />);
     expect(component).toMatchSnapshot();
   });
 });
 
 describe('HeaderContent', () => {
-  it('should render with correct isFull', () => {
+  it('should render with correct isOpen', () => {
     const headerContent = jest.fn();
-    const component = shallow(<Header isFull content={headerContent} />);
+    const component = shallow(<Header isOpen content={headerContent} />);
 
     expect(
       component
         .find('WithTheme(HeaderWrapper)')
         .children()
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(true);
 
-    component.setProps({ isFull: false });
+    component.setProps({ isOpen: false });
     expect(
       component
         .find('WithTheme(HeaderWrapper)')
         .children()
         .at(0)
-        .prop('isFull'),
+        .prop('isOpen'),
     ).toEqual(false);
   });
 });

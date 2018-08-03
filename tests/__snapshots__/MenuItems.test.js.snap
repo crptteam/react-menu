@@ -3,30 +3,30 @@
 exports[`MenuItems should renders without problem 1`] = `
 <MenuItemsWrapper>
   <WithTheme(MenuItemWrapper)
-    isFull={true}
+    isOpen={true}
     isSelected={false}
     key="0"
   >
     <mockConstructor
-      isFull={true}
+      isOpen={true}
     />
   </WithTheme(MenuItemWrapper)>
   <WithTheme(MenuItemWrapper)
-    isFull={true}
+    isOpen={true}
     isSelected={true}
     key="1"
   >
     <mockConstructor
-      isFull={true}
+      isOpen={true}
     />
   </WithTheme(MenuItemWrapper)>
   <WithTheme(MenuItemWrapper)
-    isFull={true}
+    isOpen={true}
     isSelected={false}
     key="2"
   >
     <mockConstructor
-      isFull={true}
+      isOpen={true}
     />
   </WithTheme(MenuItemWrapper)>
 </MenuItemsWrapper>

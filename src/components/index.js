@@ -23,11 +23,11 @@ class Menu extends PureComponent {
   };
 
   static defaultProps = {
-    isFull: false,
-    header: () => (<div>Header is absent</div>),
-    footer: () => (<div>Footer is absent</div>),
+    isOpen: false,
+    header: () => (<div />),
+    footer: () => (<div />),
     menuItems: [{
-      component: () => (<div>Items are absent</div>),
+      component: () => (<div />),
       isSelected: false,
     }],
     onFullModeClick: () => {},
@@ -35,7 +35,7 @@ class Menu extends PureComponent {
 
   render() {
     const {
-      isFull,
+      isOpen,
       onFullModeClick,
       header,
       footer,
@@ -43,10 +43,10 @@ class Menu extends PureComponent {
     } = this.props;
 
     return (
-      <MenuWrapper isFull={isFull}>
-        <Header isFull={isFull} content={header} />
-        <MenuItems isFull={isFull} content={menuItems} />
-        <Footer isFull={isFull} onClick={onFullModeClick} content={footer} />
+      <MenuWrapper isOpen={isOpen}>
+        <Header isOpen={isOpen} content={header} />
+        <MenuItems isOpen={isOpen} content={menuItems} />
+        <Footer isOpen={isOpen} onClick={onFullModeClick} content={footer} />
       </MenuWrapper>
     );
   }

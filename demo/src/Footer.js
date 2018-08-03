@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  isFull: PropTypes.bool,
+  isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
-  isFull: false,
+  isOpen: false,
 };
 
-const Footer = ({ isFull }) => (
-  isFull
+const Footer = ({ isOpen }) => (
+  isOpen
     ? (<div>BIG FOOOOTER!!!</div>)
     : (<div>small footer</div>)
 );

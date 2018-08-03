@@ -2,11 +2,11 @@
 
 exports[`Menu should render without parameters 1`] = `
 <WithTheme(MenuWrapper)
-  isFull={false}
+  isOpen={false}
 >
   <Header
     content={[Function]}
-    isFull={false}
+    isOpen={false}
   />
   <MenuItems
     content={
@@ -17,11 +17,11 @@ exports[`Menu should render without parameters 1`] = `
         },
       ]
     }
-    isFull={false}
+    isOpen={false}
   />
   <Footer
     content={[Function]}
-    isFull={false}
+    isOpen={false}
     onClick={[Function]}
   />
 </WithTheme(MenuWrapper)>

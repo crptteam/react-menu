@@ -8,18 +8,18 @@ export default class Header extends PureComponent {
   displayName = 'Header';
 
   static propTypes = {
-    isFull: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     content: PropTypes.func.isRequired,
   };
 
   render() {
     const {
-      isFull,
+      isOpen,
       content: HeaderContent,
     } = this.props;
     return (
       <HeaderWrapper>
-        <HeaderContent isFull={isFull} />
+        <HeaderContent isOpen={isOpen} />
       </HeaderWrapper>
     );
   }

@@ -17,6 +17,7 @@ const propTypes = {
 };
 
 const SeparateLineDiv = styled.div`
+  -js-display: flex;
   display: flex;
   height: ${({ separatorTheme }) => separatorTheme.height};
   width: ${({ separatorTheme }) => separatorTheme.width};

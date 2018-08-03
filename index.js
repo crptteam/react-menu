@@ -1,3 +1,3 @@
-import Sidebar from './src';
+import Menu from './src';
 
-export default Sidebar;
+export default Menu;

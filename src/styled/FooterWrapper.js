@@ -17,15 +17,15 @@ const propTypes = {
 };
 
 const HeaderDiv = styled.div`
+  -js-display: flex;
   display: flex;
   flex-direction: column;
-  
+  align-items: ${({ footerTheme }) => footerTheme.alignItems};
+
+
   height: ${({ footerTheme }) => footerTheme.height};
   margin-top: ${({ footerTheme }) => footerTheme.marginTop};
   margin-bottom: ${({ footerTheme }) => footerTheme.marginBottom};
-}};
-  display: flex;
-  align-items: ${({ footerTheme }) => footerTheme.alignItems};
 `;
 
 

@@ -3,28 +3,28 @@ import PropTypes from 'prop-types';
 import Icon from '@crpt/react-icon';
 
 const propTypes = {
-  isFull: PropTypes.bool,
+  isOpen: PropTypes.bool,
   text: PropTypes.string.isRequired,
   iconName: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
-  isFull: false,
+  isOpen: false,
 };
 
-const MenuItem = ({ isFull, text, iconName }) => (
+const MenuItem = ({ isOpen, text, iconName }) => (
   <div
     style={{
       height: '100%',
       width: '100%',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: isFull ? 'flex-start' : 'center',
+      justifyContent: isOpen ? 'flex-start' : 'center',
     }}
     onClick={() => console.log(`Clicked to ${text}.`)}
   >
     <Icon type={iconName} />
-    {isFull ? text : null}
+    {isOpen ? text : null}
   </div>
 );
 

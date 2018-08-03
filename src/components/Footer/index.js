@@ -10,14 +10,14 @@ export default class Footer extends PureComponent {
   displayName = 'Footer';
 
   static propTypes = {
-    isFull: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     content: PropTypes.func.isRequired,
     onClick: PropTypes.func.isRequired,
   };
 
   render() {
     const {
-      isFull,
+      isOpen,
       onClick,
       content: FooterContent,
     } = this.props;
@@ -26,7 +26,7 @@ export default class Footer extends PureComponent {
       <FooterWrapper>
         <Button onClick={onClick} />
         <SeparateLine />
-        <FooterContent isFull={isFull} />
+        <FooterContent isOpen={isOpen} />
       </FooterWrapper>
     );
   }

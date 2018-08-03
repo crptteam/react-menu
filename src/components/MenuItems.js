@@ -8,7 +8,7 @@ export default class MenuItems extends PureComponent {
   displayName = 'MenuItems';
 
   static propTypes = {
-    isFull: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     content: PropTypes.arrayOf(
       PropTypes.shape({
         component: PropTypes.func.isRequired,
@@ -19,15 +19,15 @@ export default class MenuItems extends PureComponent {
 
   render() {
     const {
-      isFull,
+      isOpen,
       content,
     } = this.props;
 
     return (
       <MenuItemsWrapper>
         {content.map((Item, i) => (
-          <MenuItemWrapper key={i} isFull={isFull} isSelected={Item.isSelected}>
-            <Item.component isFull={isFull} />
+          <MenuItemWrapper key={i} isOpen={isOpen} isSelected={Item.isSelected}>
+            <Item.component isOpen={isOpen} />
           </MenuItemWrapper>
         ))}
       </MenuItemsWrapper>

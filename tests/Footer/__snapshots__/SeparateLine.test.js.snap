@@ -176,7 +176,7 @@ exports[`Footer/SeparateLine should renders without problem 1`] = `
           }
         >
           <div
-            className="SeparateLineWrapper__SeparateLineDiv-hyoUrY gWkEyE"
+            className="SeparateLineWrapper__SeparateLineDiv-hyoUrY fZONmc"
           />
         </SeparateLineWrapper__SeparateLineDiv>
       </SeparateLineWrapper>

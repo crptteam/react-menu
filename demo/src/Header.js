@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  isFull: PropTypes.bool,
+  isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
-  isFull: false,
+  isOpen: false,
 };
 
-const Header = ({ isFull }) => (
-  isFull
+const Header = ({ isOpen }) => (
+  isOpen
     ? (<div>BIG HEADER!!!</div>)
     : (<div>small header</div>)
 );
