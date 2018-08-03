@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer/Button should renders without problem 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "Menu": Object {
+        "common": Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "rgba(0, 0, 0, 0.25)",
+          "borderWidth": "1px",
+          "shadowColor": "rgba(0, 0, 0, 0.25)",
+          "shadowX": "0px",
+          "shadowY": "2px",
+          "width": Object {
+            "fold": "78px",
+            "full": "241px",
+          },
+        },
+        "footer": Object {
+          "alignItems": "center",
+          "height": "240px",
+          "marginBottom": "10px",
+          "marginTop": "10px",
+        },
+        "fullModeButton": Object {
+          "height": "80px",
+        },
+        "header": Object {
+          "alignItems": "center",
+          "height": "200px",
+          "marginBottom": "10px",
+          "marginTop": "10px",
+        },
+        "item": Object {
+          "borderRadius": "4px",
+          "height": "52px",
+          "hoverBorderColor": "#F8EC31",
+          "hoverBorderWidth": "1px",
+          "isSelectedColor": "#F8EC31",
+          "justifyContentOnFold": "center",
+          "justifyContentOnFull": "flex-start",
+          "marginBottom": "10px",
+          "marginTop": "10px",
+          "shadowColor": "rgba(0, 0, 0, 0.25)",
+          "shadowX": "0px",
+          "shadowY": "2px",
+          "width": "80%",
+        },
+        "separator": Object {
+          "color": "rgba(0, 0, 0, 0.25)",
+          "height": "1px",
+          "width": "80%",
+        },
+      },
+    }
+  }
+>
+  <Button
+    onClick={[MockFunction]}
+  >
+    <WithTheme(ButtonWrapper)
+      onClick={[MockFunction]}
+    >
+      <ButtonWrapper
+        onClick={[MockFunction]}
+        theme={
+          Object {
+            "Menu": Object {
+              "common": Object {
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "rgba(0, 0, 0, 0.25)",
+                "borderWidth": "1px",
+                "shadowColor": "rgba(0, 0, 0, 0.25)",
+                "shadowX": "0px",
+                "shadowY": "2px",
+                "width": Object {
+                  "fold": "78px",
+                  "full": "241px",
+                },
+              },
+              "footer": Object {
+                "alignItems": "center",
+                "height": "240px",
+                "marginBottom": "10px",
+                "marginTop": "10px",
+              },
+              "fullModeButton": Object {
+                "height": "80px",
+              },
+              "header": Object {
+                "alignItems": "center",
+                "height": "200px",
+                "marginBottom": "10px",
+                "marginTop": "10px",
+              },
+              "item": Object {
+                "borderRadius": "4px",
+                "height": "52px",
+                "hoverBorderColor": "#F8EC31",
+                "hoverBorderWidth": "1px",
+                "isSelectedColor": "#F8EC31",
+                "justifyContentOnFold": "center",
+                "justifyContentOnFull": "flex-start",
+                "marginBottom": "10px",
+                "marginTop": "10px",
+                "shadowColor": "rgba(0, 0, 0, 0.25)",
+                "shadowX": "0px",
+                "shadowY": "2px",
+                "width": "80%",
+              },
+              "separator": Object {
+                "color": "rgba(0, 0, 0, 0.25)",
+                "height": "1px",
+                "width": "80%",
+              },
+            },
+          }
+        }
+      >
+        <ButtonWrapper__ButtonDiv
+          fullModeButtonTheme={
+            Object {
+              "height": "80px",
+            }
+          }
+          onClick={[MockFunction]}
+          theme={
+            Object {
+              "Menu": Object {
+                "common": Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(0, 0, 0, 0.25)",
+                  "borderWidth": "1px",
+                  "shadowColor": "rgba(0, 0, 0, 0.25)",
+                  "shadowX": "0px",
+                  "shadowY": "2px",
+                  "width": Object {
+                    "fold": "78px",
+                    "full": "241px",
+                  },
+                },
+                "footer": Object {
+                  "alignItems": "center",
+                  "height": "240px",
+                  "marginBottom": "10px",
+                  "marginTop": "10px",
+                },
+                "fullModeButton": Object {
+                  "height": "80px",
+                },
+                "header": Object {
+                  "alignItems": "center",
+                  "height": "200px",
+                  "marginBottom": "10px",
+                  "marginTop": "10px",
+                },
+                "item": Object {
+                  "borderRadius": "4px",
+                  "height": "52px",
+                  "hoverBorderColor": "#F8EC31",
+                  "hoverBorderWidth": "1px",
+                  "isSelectedColor": "#F8EC31",
+                  "justifyContentOnFold": "center",
+                  "justifyContentOnFull": "flex-start",
+                  "marginBottom": "10px",
+                  "marginTop": "10px",
+                  "shadowColor": "rgba(0, 0, 0, 0.25)",
+                  "shadowX": "0px",
+                  "shadowY": "2px",
+                  "width": "80%",
+                },
+                "separator": Object {
+                  "color": "rgba(0, 0, 0, 0.25)",
+                  "height": "1px",
+                  "width": "80%",
+                },
+              },
+            }
+          }
+        >
+          <div
+            className="ButtonWrapper__ButtonDiv-hjHEpT cHjIRQ"
+            onClick={[MockFunction]}
+          >
+            <ButtonIcon
+              fill="none"
+              height="44"
+              viewBox="0 0 44 44"
+              width="44"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <svg
+                fill="none"
+                height="44"
+                viewBox="0 0 44 44"
+                width="44"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27 23H17c-.6 0-1-.4-1-1s.4-1 1-1h10c.6 0 1 .4 1 1s-.4 1-1 1zM27 19H17c-.6 0-1-.4-1-1s.4-1 1-1h10c.6 0 1 .4 1 1s-.4 1-1 1zM27 27H17c-.6 0-1-.4-1-1s.4-1 1-1h10c.6 0 1 .4 1 1s-.4 1-1 1z"
+                  fill="#434244"
+                />
+                <circle
+                  cx="22"
+                  cy="22"
+                  r="21.5"
+                  stroke="#C4C4C4"
+                  strokeOpacity=".25"
+                />
+              </svg>
+            </ButtonIcon>
+          </div>
+        </ButtonWrapper__ButtonDiv>
+      </ButtonWrapper>
+    </WithTheme(ButtonWrapper)>
+  </Button>
+</ThemeProvider>
+`;
