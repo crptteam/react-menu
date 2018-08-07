@@ -10,27 +10,23 @@ class Menu extends PureComponent {
   displayName='Menu';
 
   static propTypes = {
-    isFull: PropTypes.bool,
+    isOpen: PropTypes.bool,
     onFullModeClick: PropTypes.func,
     header: PropTypes.func,
     footer: PropTypes.func,
-    menuItems: PropTypes.arrayOf(
-      PropTypes.shape({
-        component: PropTypes.func.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-      }),
-    ),
+    menuItems: PropTypes.arrayOf(PropTypes.func),
   };
 
   static defaultProps = {
     isOpen: false,
     header: () => (<div />),
     footer: () => (<div />),
-    menuItems: [{
-      component: () => (<div />),
-      isSelected: false,
-    }],
+    menuItems: [() => (<div />)],
     onFullModeClick: () => {},
+  }
+
+  onMenuItemsClick = () => {
+    this.forceUpdate();
   }
 
   render() {
@@ -45,7 +41,7 @@ class Menu extends PureComponent {
     return (
       <MenuWrapper isOpen={isOpen}>
         <Header isOpen={isOpen} content={header} />
-        <MenuItems isOpen={isOpen} content={menuItems} />
+        <MenuItems isOpen={isOpen} content={menuItems} onClick={this.onMenuItemsClick} />
         <Footer isOpen={isOpen} onClick={onFullModeClick} content={footer} />
       </MenuWrapper>
     );

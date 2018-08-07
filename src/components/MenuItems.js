@@ -1,36 +1,30 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import MenuItemsWrapper from '../styled/MenuItemsWrapper';
 import MenuItemWrapper from '../styled/MenuItemWrapper';
 
-export default class MenuItems extends PureComponent {
-  displayName = 'MenuItems';
+const propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  content: PropTypes.arrayOf(PropTypes.func).isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
-  static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    content: PropTypes.arrayOf(
-      PropTypes.shape({
-        component: PropTypes.func.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-      }).isRequired,
-    ).isRequired,
-  };
+const MenuItems = ({ isOpen, content, onClick }) => {
+  return (
+    <MenuItemsWrapper
+      onClick={onClick}
+    >
+      {content.map((Item, i) => (
+        <MenuItemWrapper key={i} isOpen={isOpen}>
+          <Item isOpen={isOpen} />
+        </MenuItemWrapper>
+      ))}
+    </MenuItemsWrapper>
+  );
+};
 
-  render() {
-    const {
-      isOpen,
-      content,
-    } = this.props;
+MenuItems.displayName = 'MenuItems';
+MenuItems.propTypes = propTypes;
 
-    return (
-      <MenuItemsWrapper>
-        {content.map((Item, i) => (
-          <MenuItemWrapper key={i} isOpen={isOpen} isSelected={Item.isSelected}>
-            <Item.component isOpen={isOpen} />
-          </MenuItemWrapper>
-        ))}
-      </MenuItemsWrapper>
-    );
-  }
-}
+export default MenuItems;

@@ -26,7 +26,7 @@ import Menu from "@crpt/react-menu";
 | `isOpen: boolean`  | When true Menu width is wide, else - narrow |   |
 | `header: function`  | Header component. _See Note1_ |   |
 | `footer: function`  | Footer component. _See Note1_ |   |
-| `menuItems: Array of objects`  | Menu items. _See Note2_ |   |
+| `menuItems: Array of functions`  | Menu items. |   |
 
 
 
@@ -47,14 +47,6 @@ const MenuItem = ({ isOpen, text, iconName }) => (
 ```
   We can define text and iconName props for every item, and isOpen property will be sent when render 
 `({ isOpen }) => (<MenuItem isOpen={isOpen} text="smthText" iconName="smthIconName" />);`
-  
-
-___Note 2.___ Object of menuItems description.
-
-| PropName | Type |
-|---|---|
-| component | function. _See Note1_ |
-| isSelected | boolean |
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square

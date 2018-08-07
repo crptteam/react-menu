@@ -109,10 +109,7 @@ describe('MenuItems', () => {
   });
 
   it('should render with correct content', () => {
-    const items = [{
-      component: jest.fn(),
-      isSelected: false,
-    }];
+    const items = [jest.fn()];
 
     const component = shallow(<Menu isOpen menuItems={items} />);
     expect(

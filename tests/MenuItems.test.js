@@ -5,32 +5,14 @@ import MenuItems from '../src/components/MenuItems';
 
 describe('MenuItems', () => {
   it('should renders without problem', () => {
-    const items = [{
-      component: jest.fn(),
-      isSelected: false,
-    }, {
-      component: jest.fn(),
-      isSelected: true,
-    }, {
-      component: jest.fn(),
-      isSelected: false,
-    }];
-    const component = shallow(<MenuItems isOpen content={items} />);
+    const items = [jest.fn(), jest.fn(), jest.fn()];
+    const component = shallow(<MenuItems isOpen content={items} onClick={jest.fn()} />);
     expect(component).toMatchSnapshot();
   });
 
   it('should render every component from items in wrapper', () => {
-    const items = [{
-      component: jest.fn(),
-      isSelected: false,
-    }, {
-      component: jest.fn(),
-      isSelected: true,
-    }, {
-      component: jest.fn(),
-      isSelected: false,
-    }];
-    const component = shallow(<MenuItems isOpen content={items} />);
+    const items = [jest.fn(), jest.fn(), jest.fn()];
+    const component = shallow(<MenuItems isOpen content={items} onClick={jest.fn()} />);
     expect(
       component
         .find('mockConstructor')
@@ -45,11 +27,8 @@ describe('MenuItems', () => {
   });
 
   it('should render component from items with isOpen value', () => {
-    const items = [{
-      component: jest.fn(),
-      isSelected: false,
-    }];
-    const component = shallow(<MenuItems isOpen content={items} />);
+    const items = [jest.fn()];
+    const component = shallow(<MenuItems isOpen content={items} onClick={jest.fn()} />);
     expect(
       component
         .find('mockConstructor')
@@ -67,11 +46,8 @@ describe('MenuItems', () => {
   });
 
   it('should render MenuItemWrapper with isOpen value', () => {
-    const items = [{
-      component: jest.fn(),
-      isSelected: false,
-    }];
-    const component = shallow(<MenuItems isOpen content={items} />);
+    const items = [jest.fn()];
+    const component = shallow(<MenuItems isOpen content={items} onClick={jest.fn()} />);
     expect(
       component
         .find('WithTheme(MenuItemWrapper)')
@@ -88,27 +64,11 @@ describe('MenuItems', () => {
     ).toEqual(false);
   });
 
-
-  it('should render MenuItemWrapper with isSelected value', () => {
-    const items = [{
-      component: jest.fn(),
-      isSelected: false,
-    }];
-    const component = shallow(<MenuItems isOpen content={items} />);
-    expect(
-      component
-        .find('WithTheme(MenuItemWrapper)')
-        .at(0)
-        .prop('isSelected'),
-    ).toEqual(false);
-
-    items[0].isSelected = true;
-    component.setProps({ isOpen: false, content: items });
-    expect(
-      component
-        .find('WithTheme(MenuItemWrapper)')
-        .at(0)
-        .prop('isSelected'),
-    ).toEqual(true);
+  it('should call onClick', () => {
+    const items = [jest.fn()];
+    const onClick = jest.fn();
+    const component = shallow(<MenuItems isOpen content={items} onClick={onClick} />);
+    component.find('MenuItemsWrapper').simulate('click');
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });

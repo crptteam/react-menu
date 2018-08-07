@@ -22,7 +22,6 @@ const HeaderDiv = styled.div`
   flex-direction: column;
   align-items: ${({ footerTheme }) => footerTheme.alignItems};
 
-
   height: ${({ footerTheme }) => footerTheme.height};
   margin-top: ${({ footerTheme }) => footerTheme.marginTop};
   margin-bottom: ${({ footerTheme }) => footerTheme.marginBottom};

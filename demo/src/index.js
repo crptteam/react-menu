@@ -1,44 +1,23 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { render } from 'react-dom';
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 import Menu from '../../src/index';
 import defaultTheme from '../../src/theme/defaultTheme';
 import './index.css';
 import Header from './Header';
 import Footer from './Footer';
-import MenuItem from './MenuItem';
+import MenuItem from './MenuItem/index';
 
-class Demo extends Component {
-  state = {
-    isOpen: false,
-  }
-  constructor() {
-    super();
+class Demo extends PureComponent {
+  menuItems = [
+    ({ isOpen }) => (<MenuItem iconName="download" text="Item_0" isOpen={isOpen} link="/item_0" />),
+    ({ isOpen }) => (<MenuItem iconName="download" text="Item_1" isOpen={isOpen} link="/item_1" />),
+    ({ isOpen }) => (<MenuItem iconName="download" text="Item_2" isOpen={isOpen} link="/item_2" />),
+  ];
 
-    this.menuItems = [{
-      component: () => (<div>menu_0</div>),
-      isSelected: true,
-    }, {
-      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="calendar-icon" text="menu 1_" />),
-      isSelected: true,
-    }, {
-      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="checkmark" text="menu 2___" />),
-      isSelected: false,
-    }, {
-      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="code-invalid" text="menu 3____" />),
-      isSelected: false,
-    }, {
-      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="edit" text="menu 4" />),
-      isSelected: true,
-    }, {
-      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="emission" text="menu 5_" />),
-      isSelected: true,
-    }, {
-      component: ({ isOpen }) => (<MenuItem isOpen={isOpen} iconName="pack" text="menu 6____  " />),
-      isSelected: false,
-    }];
-  }
+  state = { isOpen: false };
 
   toggleFullMode = () => {
     console.log('Changed isOpen');
@@ -47,28 +26,34 @@ class Demo extends Component {
   }
 
   render() {
-    const {
-      isOpen,
-    } = this.state;
+    const { isOpen } = this.state;
 
     return (
-      <div>
-        <h1>
-          react-menu Demo
-        </h1>
-        <div className="flex-display_with_polyfill">
-          <div className="index">
-            <Menu
-              isOpen={isOpen}
-              header={Header}
-              footer={Footer}
-              menuItems={this.menuItems}
-              onFullModeClick={this.toggleFullMode}
-            />
+      <Router>
+        <div>
+          <h1>
+            react-menu Demo
+          </h1>
+          <div className="flex-display_with_polyfill">
+            <div className="index">
+              <Menu
+                isOpen={isOpen}
+                header={Header}
+                footer={Footer}
+                menuItems={this.menuItems}
+                onFullModeClick={this.toggleFullMode}
+              />
+            </div>
+            <div className="smth">
+              Route:
+              <Route exact path="/" component={() => (<div>Root</div>)} />
+              <Route path="/item_0" component={() => (<div>Item 0 is selected</div>)} />
+              <Route path="/item_1" component={() => (<div>Item 1 is selected</div>)} />
+              <Route path="/item_2" component={() => (<div>Item 2 is selected</div>)} />
+            </div>
           </div>
-          <div className="smth">Smth</div>
         </div>
-      </div>
+      </Router>
     );
   }
 }

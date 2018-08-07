@@ -33,6 +33,9 @@ exports[`Footer/Button should renders without problem 1`] = `
           "marginTop": "10px",
         },
         "item": Object {
+          "activeStyle": Object {
+            "isSelectedColor": "#F8EC31",
+          },
           "borderRadius": "4px",
           "height": "52px",
           "hoverBorderColor": "#F8EC31",
@@ -45,6 +48,7 @@ exports[`Footer/Button should renders without problem 1`] = `
           "shadowColor": "rgba(0, 0, 0, 0.25)",
           "shadowX": "0px",
           "shadowY": "2px",
+          "textColor": "black",
           "width": "80%",
         },
         "separator": Object {
@@ -95,6 +99,9 @@ exports[`Footer/Button should renders without problem 1`] = `
                 "marginTop": "10px",
               },
               "item": Object {
+                "activeStyle": Object {
+                  "isSelectedColor": "#F8EC31",
+                },
                 "borderRadius": "4px",
                 "height": "52px",
                 "hoverBorderColor": "#F8EC31",
@@ -107,6 +114,7 @@ exports[`Footer/Button should renders without problem 1`] = `
                 "shadowColor": "rgba(0, 0, 0, 0.25)",
                 "shadowX": "0px",
                 "shadowY": "2px",
+                "textColor": "black",
                 "width": "80%",
               },
               "separator": Object {
@@ -156,6 +164,9 @@ exports[`Footer/Button should renders without problem 1`] = `
                   "marginTop": "10px",
                 },
                 "item": Object {
+                  "activeStyle": Object {
+                    "isSelectedColor": "#F8EC31",
+                  },
                   "borderRadius": "4px",
                   "height": "52px",
                   "hoverBorderColor": "#F8EC31",
@@ -168,6 +179,7 @@ exports[`Footer/Button should renders without problem 1`] = `
                   "shadowColor": "rgba(0, 0, 0, 0.25)",
                   "shadowX": "0px",
                   "shadowY": "2px",
+                  "textColor": "black",
                   "width": "80%",
                 },
                 "separator": Object {

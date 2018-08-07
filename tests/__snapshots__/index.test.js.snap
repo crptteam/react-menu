@@ -11,13 +11,11 @@ exports[`Menu should render without parameters 1`] = `
   <MenuItems
     content={
       Array [
-        Object {
-          "component": [Function],
-          "isSelected": false,
-        },
+        [Function],
       ]
     }
     isOpen={false}
+    onClick={[Function]}
   />
   <Footer
     content={[Function]}

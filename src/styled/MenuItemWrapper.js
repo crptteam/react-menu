@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled, { withTheme } from 'styled-components';
 import { get } from 'lodash';
 
-
 const propTypes = {
   isOpen: PropTypes.bool.isRequired,
   theme: PropTypes.shape({
@@ -42,24 +41,6 @@ const MenuItemDiv = styled.div`
     ${({ itemTheme }) => itemTheme.hoverBorderWidth} 
     solid 
     rgba(0,0,0,0);
-      
-  :hover {
-    border-color: ${({ itemTheme }) => itemTheme.hoverBorderColor};
-    box-shadow:
-      ${({ itemTheme }) => itemTheme.shadowX}
-      ${({ itemTheme }) => itemTheme.shadowY}
-      0
-      0
-      ${({ itemTheme }) => itemTheme.shadowColor};
-  }
-  background-color: ${({ isSelected, itemTheme }) => (
-    isSelected ? itemTheme.isSelectedColor : null
-  )};
-  ${({ isSelected, itemTheme }) => (isSelected
-    ? `box-shadow: ${itemTheme.shadowX} ${itemTheme.shadowY}  0 0 ${itemTheme.shadowColor};`
-    : ''
-  )}
-  
 `;
 
 const MenuItemWrapper = props => (

@@ -32,6 +32,10 @@ export default {
       justifyContentOnFull: 'flex-start',
       justifyContentOnFold: 'center',
       isSelectedColor: '#F8EC31',
+      activeStyle: {
+        isSelectedColor: '#F8EC31',
+      },
+      textColor: 'black',
     },
     fullModeButton: {
       height: '80px',
