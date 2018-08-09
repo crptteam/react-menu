@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should render without parameters 1`] = `
+<WithTheme(MenuWrapper)
+  isOpen={false}
+>
+  <Header
+    content={[Function]}
+    isOpen={false}
+  />
+  <MenuItems
+    content={
+      Array [
+        [Function],
+      ]
+    }
+    isOpen={false}
+    onClick={[Function]}
+  />
+  <Footer
+    content={[Function]}
+    isOpen={false}
+    onClick={[Function]}
+  />
+</WithTheme(MenuWrapper)>
+`;
