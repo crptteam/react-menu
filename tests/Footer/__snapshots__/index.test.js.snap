@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should renders without problem 1`] = `
+<WithTheme(FooterWrapper)>
+  <Button
+    onClick={[MockFunction]}
+  />
+  <SeparateLine />
+  <mockConstructor
+    isOpen={true}
+  />
+</WithTheme(FooterWrapper)>
+`;

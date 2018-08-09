@@ -1,0 +1,21 @@
+.flex-display_with_polyfill {
+  -js-display: flex;
+  display: inline-flex;
+}
+.index {
+  -js-display: flex;
+  display: inline-flex;
+  flex-direction: row;
+  height: calc(100vh - 150px);
+  background-color: white;
+}
+.smth {
+  display: inline-flex;
+}
+/*
+a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+*/

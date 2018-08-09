@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer/SeparateLine should renders without problem 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "Menu": Object {
+        "common": Object {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "rgba(0, 0, 0, 0.25)",
+          "borderWidth": "1px",
+          "shadowColor": "rgba(0, 0, 0, 0.25)",
+          "shadowX": "0px",
+          "shadowY": "2px",
+          "width": Object {
+            "fold": "78px",
+            "full": "241px",
+          },
+        },
+        "footer": Object {
+          "alignItems": "center",
+          "height": "240px",
+          "marginBottom": "10px",
+          "marginTop": "10px",
+        },
+        "fullModeButton": Object {
+          "height": "80px",
+        },
+        "header": Object {
+          "alignItems": "center",
+          "height": "200px",
+          "marginBottom": "10px",
+          "marginTop": "10px",
+        },
+        "item": Object {
+          "activeStyle": Object {
+            "isSelectedColor": "#F8EC31",
+          },
+          "borderRadius": "4px",
+          "height": "52px",
+          "hoverBorderColor": "#F8EC31",
+          "hoverBorderWidth": "1px",
+          "isSelectedColor": "#F8EC31",
+          "justifyContentOnFold": "center",
+          "justifyContentOnFull": "flex-start",
+          "marginBottom": "10px",
+          "marginTop": "10px",
+          "shadowColor": "rgba(0, 0, 0, 0.25)",
+          "shadowX": "0px",
+          "shadowY": "2px",
+          "textColor": "black",
+          "width": "80%",
+        },
+        "separator": Object {
+          "color": "rgba(0, 0, 0, 0.25)",
+          "height": "1px",
+          "width": "80%",
+        },
+      },
+    }
+  }
+>
+  <SeparateLine>
+    <WithTheme(SeparateLineWrapper)>
+      <SeparateLineWrapper
+        theme={
+          Object {
+            "Menu": Object {
+              "common": Object {
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "rgba(0, 0, 0, 0.25)",
+                "borderWidth": "1px",
+                "shadowColor": "rgba(0, 0, 0, 0.25)",
+                "shadowX": "0px",
+                "shadowY": "2px",
+                "width": Object {
+                  "fold": "78px",
+                  "full": "241px",
+                },
+              },
+              "footer": Object {
+                "alignItems": "center",
+                "height": "240px",
+                "marginBottom": "10px",
+                "marginTop": "10px",
+              },
+              "fullModeButton": Object {
+                "height": "80px",
+              },
+              "header": Object {
+                "alignItems": "center",
+                "height": "200px",
+                "marginBottom": "10px",
+                "marginTop": "10px",
+              },
+              "item": Object {
+                "activeStyle": Object {
+                  "isSelectedColor": "#F8EC31",
+                },
+                "borderRadius": "4px",
+                "height": "52px",
+                "hoverBorderColor": "#F8EC31",
+                "hoverBorderWidth": "1px",
+                "isSelectedColor": "#F8EC31",
+                "justifyContentOnFold": "center",
+                "justifyContentOnFull": "flex-start",
+                "marginBottom": "10px",
+                "marginTop": "10px",
+                "shadowColor": "rgba(0, 0, 0, 0.25)",
+                "shadowX": "0px",
+                "shadowY": "2px",
+                "textColor": "black",
+                "width": "80%",
+              },
+              "separator": Object {
+                "color": "rgba(0, 0, 0, 0.25)",
+                "height": "1px",
+                "width": "80%",
+              },
+            },
+          }
+        }
+      >
+        <SeparateLineWrapper__SeparateLineDiv
+          separatorTheme={
+            Object {
+              "color": "rgba(0, 0, 0, 0.25)",
+              "height": "1px",
+              "width": "80%",
+            }
+          }
+          theme={
+            Object {
+              "Menu": Object {
+                "common": Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(0, 0, 0, 0.25)",
+                  "borderWidth": "1px",
+                  "shadowColor": "rgba(0, 0, 0, 0.25)",
+                  "shadowX": "0px",
+                  "shadowY": "2px",
+                  "width": Object {
+                    "fold": "78px",
+                    "full": "241px",
+                  },
+                },
+                "footer": Object {
+                  "alignItems": "center",
+                  "height": "240px",
+                  "marginBottom": "10px",
+                  "marginTop": "10px",
+                },
+                "fullModeButton": Object {
+                  "height": "80px",
+                },
+                "header": Object {
+                  "alignItems": "center",
+                  "height": "200px",
+                  "marginBottom": "10px",
+                  "marginTop": "10px",
+                },
+                "item": Object {
+                  "activeStyle": Object {
+                    "isSelectedColor": "#F8EC31",
+                  },
+                  "borderRadius": "4px",
+                  "height": "52px",
+                  "hoverBorderColor": "#F8EC31",
+                  "hoverBorderWidth": "1px",
+                  "isSelectedColor": "#F8EC31",
+                  "justifyContentOnFold": "center",
+                  "justifyContentOnFull": "flex-start",
+                  "marginBottom": "10px",
+                  "marginTop": "10px",
+                  "shadowColor": "rgba(0, 0, 0, 0.25)",
+                  "shadowX": "0px",
+                  "shadowY": "2px",
+                  "textColor": "black",
+                  "width": "80%",
+                },
+                "separator": Object {
+                  "color": "rgba(0, 0, 0, 0.25)",
+                  "height": "1px",
+                  "width": "80%",
+                },
+              },
+            }
+          }
+        >
+          <div
+            className="SeparateLineWrapper__SeparateLineDiv-hyoUrY fZONmc"
+          />
+        </SeparateLineWrapper__SeparateLineDiv>
+      </SeparateLineWrapper>
+    </WithTheme(SeparateLineWrapper)>
+  </SeparateLine>
+</ThemeProvider>
+`;

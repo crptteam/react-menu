@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItems should renders without problem 1`] = `
+<MenuItemsWrapper
+  onClick={[MockFunction]}
+>
+  <WithTheme(MenuItemWrapper)
+    isOpen={true}
+    key="0"
+  >
+    <mockConstructor
+      isOpen={true}
+    />
+  </WithTheme(MenuItemWrapper)>
+  <WithTheme(MenuItemWrapper)
+    isOpen={true}
+    key="1"
+  >
+    <mockConstructor
+      isOpen={true}
+    />
+  </WithTheme(MenuItemWrapper)>
+  <WithTheme(MenuItemWrapper)
+    isOpen={true}
+    key="2"
+  >
+    <mockConstructor
+      isOpen={true}
+    />
+  </WithTheme(MenuItemWrapper)>
+</MenuItemsWrapper>
+`;
