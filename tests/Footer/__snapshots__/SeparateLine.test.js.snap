@@ -51,6 +51,11 @@ exports[`Footer/SeparateLine should renders without problem 1`] = `
           "textColor": "black",
           "width": "80%",
         },
+        "items": Object {
+          "alignItems": "flex-start",
+          "paddingLeft": "12px",
+          "paddingRight": "12px",
+        },
         "separator": Object {
           "color": "rgba(0, 0, 0, 0.25)",
           "height": "1px",
@@ -111,6 +116,11 @@ exports[`Footer/SeparateLine should renders without problem 1`] = `
                 "shadowY": "2px",
                 "textColor": "black",
                 "width": "80%",
+              },
+              "items": Object {
+                "alignItems": "flex-start",
+                "paddingLeft": "12px",
+                "paddingRight": "12px",
               },
               "separator": Object {
                 "color": "rgba(0, 0, 0, 0.25)",
@@ -177,6 +187,11 @@ exports[`Footer/SeparateLine should renders without problem 1`] = `
                   "shadowY": "2px",
                   "textColor": "black",
                   "width": "80%",
+                },
+                "items": Object {
+                  "alignItems": "flex-start",
+                  "paddingLeft": "12px",
+                  "paddingRight": "12px",
                 },
                 "separator": Object {
                   "color": "rgba(0, 0, 0, 0.25)",
