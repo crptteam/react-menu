@@ -14,6 +14,7 @@ const MenuItems = ({ isOpen, content, onClick }) => {
   return (
     <MenuItemsWrapper
       onClick={onClick}
+      isOpen={isOpen}
     >
       {content.map((Item, i) => (
         <MenuItemWrapper key={i} isOpen={isOpen}>

@@ -18,6 +18,11 @@ export default {
       marginTop: '10px',
       marginBottom: '10px',
     },
+    items: {
+      paddingLeft: '12px',
+      paddingRight: '12px',
+      alignItems: 'flex-start'
+    },
     item: {
       width: '80%',
       height: '52px',
