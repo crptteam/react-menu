@@ -68,7 +68,7 @@ describe('MenuItems', () => {
     const items = [jest.fn()];
     const onClick = jest.fn();
     const component = shallow(<MenuItems isOpen content={items} onClick={onClick} />);
-    component.find('MenuItemsWrapper').simulate('click');
+    component.find('WithTheme(MenuItemsWrapper)').simulate('click');
     expect(onClick).toHaveBeenCalledTimes(1);
   });
 });
