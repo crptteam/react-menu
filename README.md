@@ -16,6 +16,7 @@ import Menu from "@crpt/react-menu";
     header={Header}
     footer={Footer}
     menuItems={menuItems}
+    isShowButton={isShowButton}
     onFullModeClick={toggleFullMode}
 />
 ```
@@ -26,7 +27,9 @@ import Menu from "@crpt/react-menu";
 | `isOpen: boolean`  | When true Menu width is wide, else - narrow |   |
 | `header: function`  | Header component. _See Note1_ |   |
 | `footer: function`  | Footer component. _See Note1_ |   |
+| `isShowButton: boolean`  | When true - the button in the footer is shown, when false - hiding. |   |
 | `menuItems: Array of functions`  | Menu items. |   |
+
 
 
 
