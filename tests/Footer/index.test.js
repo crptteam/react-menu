@@ -7,14 +7,16 @@ describe('Footer', () => {
   it('should renders without problem', () => {
     const content = jest.fn();
     const onClick = jest.fn();
-    const component = shallow(<Footer isOpen content={content} onClick={onClick} />);
+    const isShowButton = jest.fn();
+    const component = shallow(<Footer isOpen content={content} onClick={onClick} isShowButton={isShowButton} />);
     expect(component).toMatchSnapshot();
   });
 
   it('calling content render with isOpen', () => {
     const content = jest.fn();
     const onClick = jest.fn();
-    const component = shallow(<Footer isOpen content={content} onClick={onClick} />);
+    const isShowButton = jest.fn();
+    const component = shallow(<Footer isOpen content={content} onClick={onClick} isShowButton={isShowButton} />);
     expect(
       component
         .find('mockConstructor')
@@ -34,7 +36,8 @@ describe('Footer', () => {
   it('calling callback on click to Button', () => {
     const content = jest.fn();
     const onClick = jest.fn();
-    const component = shallow(<Footer isOpen content={content} onClick={onClick} />);
+    const isShowButton = jest.fn();
+    const component = shallow(<Footer isOpen content={content} onClick={onClick} isShowButton={isShowButton} />);
     component.find('Button').simulate('click');
     expect(onClick).toHaveBeenCalledTimes(1);
   });
