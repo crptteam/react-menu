@@ -15,10 +15,12 @@ class Menu extends PureComponent {
     header: PropTypes.func,
     footer: PropTypes.func,
     menuItems: PropTypes.arrayOf(PropTypes.func),
+    isShowButton: PropTypes.bool,
   };
 
   static defaultProps = {
     isOpen: false,
+    isShowButton: true,
     header: () => (<div />),
     footer: () => (<div />),
     menuItems: [() => (<div />)],
@@ -36,13 +38,19 @@ class Menu extends PureComponent {
       header,
       footer,
       menuItems,
+      isShowButton,
     } = this.props;
 
     return (
       <MenuWrapper isOpen={isOpen}>
         <Header isOpen={isOpen} content={header} />
         <MenuItems isOpen={isOpen} content={menuItems} onClick={this.onMenuItemsClick} />
-        <Footer isOpen={isOpen} onClick={onFullModeClick} content={footer} />
+        <Footer
+          isOpen={isOpen}
+          onClick={onFullModeClick}
+          content={footer}
+          isShowButton={isShowButton}
+        />
       </MenuWrapper>
     );
   }

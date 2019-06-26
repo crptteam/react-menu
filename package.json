@@ -1,6 +1,6 @@
 {
   "name": "@crpt/react-menu",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "react-menu React component",
   "main": "lib/index.js",
   "module": "es/index.js",
