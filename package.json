@@ -59,7 +59,7 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.10.0",
     "jest": "^23.0.1",
-    "nwb": "^0.22.0",
+    "nwb": "^0.25.2",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
